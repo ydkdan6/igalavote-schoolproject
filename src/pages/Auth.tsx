@@ -58,12 +58,14 @@ export default function Auth() {
           description: error.message,
           variant: 'destructive',
         });
+        setLoading(false);
       } else {
         toast({
           title: 'Welcome back!',
           description: 'You have successfully logged in.',
         });
-        navigate('/dashboard');
+        // Navigation will be handled by App.tsx based on role
+        // Just let the auth state change trigger the redirect
       }
     } catch (error) {
       toast({
@@ -71,7 +73,6 @@ export default function Auth() {
         description: 'An unexpected error occurred.',
         variant: 'destructive',
       });
-    } finally {
       setLoading(false);
     }
   };
@@ -105,7 +106,7 @@ export default function Auth() {
           title: 'Account Created!',
           description: 'You can now log in with your credentials.',
         });
-        navigate('/dashboard');
+        // Navigation will be handled by App.tsx based on role
       }
     } catch (error) {
       toast({
