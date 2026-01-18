@@ -58,6 +58,7 @@ export default function Auth() {
           description: error.message,
           variant: 'destructive',
         });
+        setLoading(false);
       } else {
         toast({
           title: 'Welcome back!',
@@ -71,7 +72,6 @@ export default function Auth() {
         description: 'An unexpected error occurred.',
         variant: 'destructive',
       });
-    } finally {
       setLoading(false);
     }
   };
@@ -105,7 +105,7 @@ export default function Auth() {
           title: 'Account Created!',
           description: 'You can now log in with your credentials.',
         });
-        // Navigation is handled by App.tsx based on userRole
+        navigate('/dashboard');
       }
     } catch (error) {
       toast({
