@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
@@ -63,7 +63,7 @@ export default function Auth() {
           title: 'Welcome back!',
           description: 'You have successfully logged in.',
         });
-        navigate('/dashboard');
+        // Navigation is handled by App.tsx based on userRole
       }
     } catch (error) {
       toast({
@@ -105,7 +105,7 @@ export default function Auth() {
           title: 'Account Created!',
           description: 'You can now log in with your credentials.',
         });
-        navigate('/dashboard');
+        // Navigation is handled by App.tsx based on userRole
       }
     } catch (error) {
       toast({
