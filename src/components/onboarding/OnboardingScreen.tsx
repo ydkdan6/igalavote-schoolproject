@@ -12,14 +12,14 @@ const screens = [
   {
     icon: Vote,
     title: 'Welcome to Igala Voting',
-    subtitle: 'Your Voice, Your Choice',
+    subtitle: 'AGBA!!!!',
     description: 'Participate in free and fair elections. Cast your vote securely and confidently for the candidates of your choice.',
     features: ['Easy voting process', 'Real-time results', 'Transparent system'],
   },
   {
     icon: Shield,
     title: 'Secure & Transparent',
-    subtitle: 'One Person, One Vote',
+    subtitle: 'AGBA OH!!!',
     description: 'Our system ensures that every vote counts. With advanced security measures, your vote remains anonymous and protected.',
     features: ['Encrypted voting', 'Verified identity', 'Audit trail'],
   },
